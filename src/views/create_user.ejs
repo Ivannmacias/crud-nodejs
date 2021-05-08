@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Agregar Usuario</title>
 </head>
 <body>
+    <div class="container">
     <h1>Crear usuario</h1>
-    <form action="/users/create" method="post">
-    <label for="name">Nombre</label>
-    <input type="text" name="name" id="name">
-    <label for="age">Edad</label>
-    <input type="text" name="age" id="age">
 
-    <input type="submit" value="Registrar">
+    <form class="col-6 mt-5" action="/users/create" method="post">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input class="form-control" type="text" name="name" id="name">
+        </div>
+        <div class="form-group">
+            <label for="age">Edad</label>
+            <input class="form-control" type="text" name="age" id="age">
+        </div>
+            <input class="btn btn-success btn-block mt-2" type="submit" value="Registrar">
     
     </form>
+</div>
 </body>
 </html>
