@@ -4,11 +4,12 @@ const connection = require('./connection')
 const router = require('./routes/userRouter')
 const LoggedMiddlewere = require('./middlewere/loggedMiddlewere')
 const path = require('path')
+require('dotenv').config();
 
 //settings
-
+const port = process.env.PORT;
 app.set('title','hecha en nodejs')
-app.set('port',' 3000')
+//app.set('port',' 3000')
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'))
 
@@ -28,7 +29,7 @@ app.use('/users', router)
 
 
 
-app.listen(app.get('port'),()=>{
-    console.log('Mi aplicacion '+ app.get('title') +' esta corriendo en el puerto'+app.get('port'))
+app.listen(port,()=>{
+    console.log('Mi aplicacion '+ app.get('title') +' esta corriendo en el puerto '+ port)
 })
 
